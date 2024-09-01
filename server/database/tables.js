@@ -1,4 +1,5 @@
 // Import the repository modules responsible for handling data operations on the tables
+const LandRepository = require("./models/LandRepository");
 const ServicesellerRepository = require("./models/ServicesellerRepository");
 
 // Create an empty object to hold data repositories for different tables
@@ -10,6 +11,7 @@ const tables = {};
 
 // Register each repository as data access point for its table
 tables.serviceseller = new ServicesellerRepository();
+tables.land = new LandRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table
